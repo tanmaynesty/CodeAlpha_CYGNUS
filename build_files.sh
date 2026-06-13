@@ -1,12 +1,16 @@
 #!/bin/bash
 echo "BUILD START"
 
+# Create a virtual environment and activate it
+python3 -m venv venv
+source venv/bin/activate
+
 # Install dependencies
-python3 -m pip install -r requirements.txt
+pip install -r requirements.txt
 
 # Run migrations and collectstatic
 cd backend
-python3 manage.py collectstatic --noinput --clear
-python3 manage.py migrate
+python manage.py collectstatic --noinput --clear
+python manage.py migrate
 
 echo "BUILD END"
