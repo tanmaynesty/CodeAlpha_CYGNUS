@@ -1,8 +1,12 @@
 #!/bin/bash
+echo "BUILD START"
+
 # Install dependencies
-pip install -r requirements.txt
+python3 -m pip install -r requirements.txt
 
 # Run migrations and collectstatic
 cd backend
-python manage.py collectstatic --noinput
-python manage.py migrate
+python3 manage.py collectstatic --noinput --clear
+python3 manage.py migrate
+
+echo "BUILD END"
