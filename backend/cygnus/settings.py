@@ -85,7 +85,7 @@ USE_TZ = True
 
 # Static files — serve CSS/JS from client folder
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR.parent, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR.parent, 'staticfiles', 'static')
 STATICFILES_DIRS = [
     os.path.join(CLIENT_DIR, 'css'),
     os.path.join(CLIENT_DIR, 'js'),
