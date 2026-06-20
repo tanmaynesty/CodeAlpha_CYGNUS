@@ -14,5 +14,6 @@ mkdir -p staticfiles
 cd backend
 python3 manage.py collectstatic --noinput --clear
 python3 manage.py migrate
+python3 manage.py seed_products
 
 echo "BUILD END"
