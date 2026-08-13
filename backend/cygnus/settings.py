@@ -66,6 +66,8 @@ DATABASES = {
     }
 }
 
+X_FRAME_OPTIONS = 'ALLOWALL'
+
 # Override database if DATABASE_URL is set in environment (e.g. Vercel/Neon)
 db_from_env = dj_database_url.config(conn_max_age=0, ssl_require=True)
 if db_from_env:
